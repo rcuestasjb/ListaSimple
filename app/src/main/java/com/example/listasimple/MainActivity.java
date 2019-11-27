@@ -51,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
         //5 En la listaEventos tenemos todos los objetos (con todos los campos), vamos a quedarnos solo con el campo que queremos
         //mostrar en la lista  por ejemplo el titulo
-        String[] arrayEventos = new String[listaEventos.size()];
+        String[] arrayTitulos = new String[listaEventos.size()];
         for (int i = 0; i < listaEventos.size(); i++) {
-            arrayEventos[i] = listaEventos.get(i).getTitulo();
+            arrayTitulos[i] = listaEventos.get(i).getTitulo();
         }
 
         //6 Vamos a rellenar el component listView
         ListView listView1 = (ListView) findViewById(R.id.listViewEventos);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, arrayEventos);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, arrayTitulos);
         listView1.setAdapter(adapter);
     }
 }
